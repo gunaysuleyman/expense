@@ -147,13 +147,25 @@
 
 <div class="container-fluid">
   <div class="row">
-    {% include 'partials/_sidebar.html' %}
+    
+    <main class="col-md-12"> <div class="card">    
+            
+    </div> 
+      
+        <div class="col-md-3">
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      {% block content%}
+        </div>  
+    <div class="col-md-6">
 
+            {% block content%}
+            
+            {% endblock%}
 
-      {% endblock%}
+         <div class="col-md-3">
+            
+        </div>    
+
+      
     </main>
   </div>
 </div>
