@@ -140,32 +140,21 @@
     </li>
   </ul>
 
-  <div id="navbarSearch" class="navbar-search w-100 collapse">
+  {% comment %} <div id="navbarSearch" class="navbar-search w-100 collapse">
     <input class="form-control w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
-  </div>
+  </div> {% endcomment %}
 </header>
 
 <div class="container-fluid">
   <div class="row">
     
-    <main class="col-md-12"> <div class="card">    
+    <main role="main">    
+
+
+      {% block content%}
             
-    </div> 
-      
-        <div class="col-md-3">
+      {% endblock%}
 
-        </div>  
-    <div class="col-md-6">
-
-            {% block content%}
-            
-            {% endblock%}
-
-         <div class="col-md-3">
-            
-        </div>    
-
-      
     </main>
   </div>
 </div>
