@@ -1,51 +1,53 @@
 {% extends "base_auth.html" %}
 
 {% block content %}
+<div class="container">
+    <div>
 
-<div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
-        <div class="card">
-            <div class="card-title">
-                <h4>Kayıt Olma</h4>
-
-                <form action="" method="post">
-                    <div class="form-group">
-                        <input 
-                        type="text"
-                        id="username" 
-                        name="Ad Soyad"
-                        placeholder ="Kullanıcı Adı"
-                        class = "form-control form control-sm" 
-                        required/>
-                    </div>
-                    <div class="form-group">
-                        <input 
-                        type="email"
-                        id="email" 
-                        name="email"
-                        placeholder="E-Posta"
-                        class = "form-control form control-sm" 
-                        required/>
-                    </div>  
-                    <div class="form-group">
-                        <input 
-                        type="password"
-                        id="password" 
-                        name="password"
-                        placeholder="Şifre"
-                        class = "form-control form control-sm"
-                        required
-                        />
-                        <small class="text-right">GÖSTER</small>                         
-                    </div>
-                    <input type="submit" value='Register' class="btn btn-block"/>
-   
-                </form>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Kayıt Olma</h4>
+                </div>    
+                <div class="card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input 
+                                type="text"
+                                id="username" 
+                                name="username"
+                                placeholder="Ad Soyad"
+                                class="form-control form-control-sm mb-3" 
+                                required/>
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                type="email"
+                                id="email" 
+                                name="email"
+                                placeholder="E-Posta"
+                                class="form-control form-control-sm mb-3" 
+                                required/>
+                        </div>  
+                        <div class="form-group">
+                            <input 
+                                type="password"
+                                id="password" 
+                                name="password"
+                                placeholder="Şifre"
+                                class="form-control form-control-sm mb-3"
+                                required
+                                />
+                            <small class="form-text text-muted d-block text-right">GÖSTER</small>                        
+                        </div>
+                        <button type="submit" value="Register" class="btn btn-group-sm btn-primary ">Kayıt Ol</button>
+                    </form>
+                </div>
             </div>
-        </div> 
-    </div>      
-    <div class="col-md-4"></div>
-</div>    
-
-{% endblock content %}    
+        </div>
+    </div>     
+    </div>
+</div>
+{% endblock %}
