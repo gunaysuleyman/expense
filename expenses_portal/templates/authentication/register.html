@@ -1,16 +1,16 @@
 {% extends "base_auth.html" %}
 
 {% block content %}
-<div class="container">
-    <div>
+<div class="container" margin-top="100px">
 
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Kayıt Olma</h4>
-                </div>    
-                <div class="card-body">
+                </div> 
+                   
+                <div class="card-body" body-margin="50px">
                     <form action="" method="post">
                         {% csrf_token %}
                         <div class="form-group">
@@ -40,7 +40,7 @@
                                 class="form-control form-control-sm mb-3"
                                 required
                                 />
-                            <small class="form-text text-muted d-block text-right">GÖSTER</small>                        
+                        <small class="form-text text-muted ml-2">GÖSTER</small>                         
                         </div>
                         <button type="submit" value="Register" class="btn btn-group-sm btn-primary ">Kayıt Ol</button>
                     </form>
